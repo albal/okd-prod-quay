@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - quay-operator.yaml
+  - QuayRegistry.yaml
