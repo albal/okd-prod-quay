@@ -1,0 +1,6 @@
+apiVersion: quay.redhat.com/v1
+kind: QuayRegistry
+metadata:
+  name: my-registry
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
