@@ -19,6 +19,10 @@ spec:
         env:
           - name: QUAY_HOTRELOAD
             value: "true"
+          - name: WORKER_COUNT_WEB
+            value: "2"
+          - name: WORKER_COUNT_REGISTRY
+            value: "2"
         resources:
           requests:
             cpu: 2000m
