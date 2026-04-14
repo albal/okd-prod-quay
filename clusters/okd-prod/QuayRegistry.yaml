@@ -16,6 +16,9 @@ spec:
     - kind: Quay
       managed: true
       overrides:
+        env:
+          - name: QUAY_HOTRELOAD
+            value: "true"
         resources:
           requests:
             cpu: 2000m
