@@ -7,13 +7,13 @@ metadata:
     argocd.argoproj.io/sync-wave: "3"
 spec:
   components:
-    - kind: Postgres
+    - kind: postgres
       managed: true
       overrides:
         resources:
           requests:
             cpu: 50m
-    - kind: Quay
+    - kind: quay
       managed: true
       overrides:
         env:
