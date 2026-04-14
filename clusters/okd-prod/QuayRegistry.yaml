@@ -2,5 +2,24 @@ apiVersion: quay.redhat.com/v1
 kind: QuayRegistry
 metadata:
   name: my-registry
+  namespace: quay-enterprise
   annotations:
     argocd.argoproj.io/sync-wave: "3"
+spec:
+  components:
+    - kind: Postgres
+      managed: true
+      overrides:
+        resources:
+          requests:
+            cpu: 50m
+    - kind: Quay
+      managed: true
+      overrides:
+        resources:
+          requests:
+            cpu: 2000m
+            memory: 8Gi
+          limits:
+            cpu: 4000m
+            memory: 8Gi
