@@ -25,8 +25,8 @@ spec:
             value: "2"
         resources:
           requests:
-            cpu: 2
+            cpu: '2'
             memory: 8Gi
           limits:
-            cpu: 4
+            cpu: '4'
             memory: 8Gi
