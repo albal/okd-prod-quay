@@ -16,6 +16,7 @@ spec:
     - kind: quay
       managed: true
       overrides:
+        replicas: 2
         env:
           - name: QUAY_HOTRELOAD
             value: "true"
@@ -25,17 +26,17 @@ spec:
             value: "2"
         resources:
           requests:
-            cpu: 500m
-            memory: 8Gi
+            cpu: 1500m
+            memory: 4Gi
           limits:
             cpu: '4'
             memory: 8Gi
-    - kind: clair	
-      managed: true	
-    - kind: redis	
-      managed: true	
-    - kind: horizontalpodautoscaler	
-      managed: true	
+    - kind: clair
+      managed: true
+    - kind: redis
+      managed: true
+    - kind: horizontalpodautoscaler
+      managed: false
     - kind: objectstorage	
       managed: true	
     - kind: route	
